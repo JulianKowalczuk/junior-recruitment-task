@@ -1,0 +1,23 @@
+{
+  "name": "junior-recruitment-task",
+  "version": "1.0.0",
+  "description": "Realizacja prostej listy ToDo (lista zadań do zrobienia) jako aplikacji internetowej, z wykorzystaniem HTML5 po stronie frontendu i dowolnej technologi po stronie backendu. Aplikacja umożliwia dodawanie, przeglądanie i oznaczanie jako wykonane różnych zadań, które zapisywane będą w bazie danych `SQLite`. Dla backendu możemy skorzystać z gotowego API https://todo-simple-api.herokuapp.com/ lub wykonań prosty skrypt w PHP (przykład http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/) lub NodeJS.",
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianKowalczuk/junior-recruitment-task.git"
+  },
+  "author": "Julian Kowalczuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JulianKowalczuk/junior-recruitment-task/issues"
+  },
+  "homepage": "https://github.com/JulianKowalczuk/junior-recruitment-task#readme"
+}

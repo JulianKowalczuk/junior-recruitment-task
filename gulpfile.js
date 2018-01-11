@@ -29,7 +29,15 @@ gulp.task('minify-js', function () {
 });
 
 gulp.task('browser-sync', function () {
-  browserSync.init({ server: { baseDir: 'frontend' } });
+  browserSync.init({
+    server: {
+      baseDir: '',
+      routes: {
+        '/assets': 'assets',
+        '/frontend': 'frontend'
+      }
+    }
+  });
 });
 
 gulp.task('default', ['sass', 'minify-css', 'minify-js']);

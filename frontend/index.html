@@ -5,12 +5,49 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Julian Kowalczuk" />
-  <title>Junior Recruitment Task by </title>
+  <title>Junior Recruitment Task by Julian Kowalczuk</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <div class="todo-list">
+    <div class="tl-row tl-header-row">
+      <div class="tl-short-column">
+      </div>
+      <div class="tl-splitter">
+      </div>
+      <div class="tl-long-column">
+        <div class="tl-header-text">
+          ToDo List
+        </div>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-short-column">
+        <input type="checkbox" />
+      </div>
+      <div class="tl-splitter">
+      </div>
+      <div class="tl-long-column">
+        <div>
+          Make a new post about...
+        </div>
+        <img class="tl-trash-icon" src="../assets/trash.png" />
+      </div>
+    </div>
+    <div class="tl-row tl-input-row">
+      <div class="tl-short-column">
+        <a class="tl-add-task-cross" href="javascript:addTask()">
+          ✚
+        </a>
+      </div>
+      <div class="tl-splitter">
+      </div>
+      <div class="tl-long-column">
+        <input type="text" class="tl-task-entry" />
+      </div>
+    </div>
   </div>
   <script type="text/javascript" src="js/todo-manager.min.js"></script>
 </body>

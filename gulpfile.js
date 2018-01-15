@@ -1,6 +1,7 @@
 var browserSync = require('browser-sync').create();
 var gulp = require('gulp');
 var gulpCleanCSS = require('gulp-clean-css');
+var gulpConcat = require('gulp-concat');
 var gulpRename = require('gulp-rename');
 var gulpSass = require('gulp-sass');
 var gulpUglify = require('gulp-uglify');
@@ -21,7 +22,11 @@ gulp.task('minify-css', ['sass'], function () {
 });
 
 gulp.task('minify-js', function () {
-  return gulp.src('frontend/js/todo-manager.js')
+  return gulp.src([
+    'frontend/js/todo-api.js',
+    'frontend/js/todo-manager.js'
+  ])
+    .pipe(gulpConcat('todo.js'))
     .pipe(gulpUglify())
     .pipe(gulpRename({ suffix: '.min' }))
     .pipe(gulp.dest('frontend/js'))
@@ -46,5 +51,5 @@ gulp.task('dev', ['browser-sync', 'default'], function () {
   gulp.watch('frontend/index.html', browserSync.reload);
   gulp.watch('frontend/scss/style.scss', ['sass']);
   gulp.watch('frontend/css/style.css', ['minify-css']);
-  gulp.watch('frontend/js/todo-manager.js', ['minify-js']);
+  gulp.watch('frontend/js/*.js', ['minify-js']);
 });

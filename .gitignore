@@ -1,4 +1,4 @@
 node_modules/
 
 frontend/css
-frontend/js/todo-manager.min.js
+frontend/js/todo.min.js

@@ -2,8 +2,10 @@ var todoApi = new TodoApi();
 
 function TodoManager(tasksDOM, addButtonDOM, inputDOM) {
 
+  // our array of tasks
   var tasks = [];
 
+  // bind event to control addButton style in todoList to look like disabled if entry is empty
   inputDOM.oninput = function (e) {
     console.log(e.target.value);
     if (!e.target.value) {
@@ -13,6 +15,7 @@ function TodoManager(tasksDOM, addButtonDOM, inputDOM) {
     addButtonDOM.className = 'tl-add-task-cross';
   }
 
+  // function creating taskDOM to as ready div
   function createTaskDOM(taskContent, isTaskDone, taskIndex) {
 
     var input = document.createElement('input');
@@ -86,6 +89,7 @@ function TodoManager(tasksDOM, addButtonDOM, inputDOM) {
     });
   }
 
+  // clear tasks and reappend them to container
   function renderTasks() {
     while (tasksDOM.firstChild) {
       tasksDOM.removeChild(tasksDOM.firstChild);
@@ -97,6 +101,7 @@ function TodoManager(tasksDOM, addButtonDOM, inputDOM) {
     }
   }
 
+  // load tasks from API and render them
   function loadTasks() {
     todoApi.getTasks(function (fetchedTasks) {
       tasks = fetchedTasks;

@@ -1,3 +1,5 @@
+// API connector with functions, which fire callbacks from their parameters
+
 function TodoApi() {
 
   var herekuappApiUrl = 'https://todo-simple-api.herokuapp.com/todos';

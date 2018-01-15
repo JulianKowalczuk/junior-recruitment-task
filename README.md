@@ -4,10 +4,12 @@ Realizacja prostej listy ToDo (lista zadań do zrobienia) jako aplikacji interne
 Dla backendu możemy skorzystać z gotowego API https://todo-simple-api.herokuapp.com/ lub wykonań prosty skrypt w PHP (przykład http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/) lub NodeJS.
 
 ### Instalacja
-Instalacja narzędzie do developmentu.
+Instalacja narzędzie do developmentu
+
 `npm i`
 
 Podgląd developerski z routingiem ustalonym w zadaniu
+
 `gulp dev`
 
 Frontend dostępny pod adresem `/frontend`.
